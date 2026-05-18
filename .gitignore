@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.npy
+*.png
+vivado_project/
+*.jou
+*.log
+.Xil/
