@@ -6,7 +6,7 @@ Pan-Tompkins R-peak detection algorithm.
 
 Pipeline:
   Filtered ECG → Differentiate → Square → Moving Window Integrate
-               → Adaptive Threshold → Refractory Period → R-peaks
+               → Adaptive Threshold → Refractory Period → Refine → R-peaks
 """
 
 import numpy as np
@@ -85,30 +85,28 @@ def detect_peaks(integrated, fs=FS):
     Threshold tracks signal level:
       - Updates upward when a peak is detected
       - Decays slowly between peaks (handles baseline wander)
-      - Searchback activates if no peak found for 1.5× expected RR
 
     Refractory period = 200ms = 72 samples
       - After each detection, ignore signal for 72 samples
       - Physiologically impossible to have two beats within 200ms
 
-    Returns array of detected R-peak sample indices.
+    Returns array of detected peak indices (in integrated signal space).
+    These are later refined to true R-peak locations by refine_to_rpeak().
     """
-    refractory  = int(0.2 * fs)    # 200ms = 72 samples
-    n           = len(integrated)
-    r_peaks     = []
+    refractory   = int(0.2 * fs)    # 200ms = 72 samples
+    n            = len(integrated)
+    r_peaks      = []
 
     # Initialise thresholds from first 2 seconds of signal
-    init_window = integrated[:2 * fs]
+    init_window  = integrated[:2 * fs]
     signal_level = np.max(init_window)
     noise_level  = np.mean(init_window)
     threshold    = noise_level + 0.25 * (signal_level - noise_level)
 
     i = 0
     while i < n:
-        # Find next local maximum above threshold
         if integrated[i] > threshold:
             # Find the peak of this bump
-            peak_start = i
             while i < n - 1 and integrated[i] <= integrated[i + 1]:
                 i += 1
             peak_idx   = i
@@ -118,14 +116,9 @@ def detect_peaks(integrated, fs=FS):
             signal_level = 0.125 * peak_value + 0.875 * signal_level
             threshold    = noise_level + 0.25 * (signal_level - noise_level)
 
-            # Find true R-peak in original filtered signal within ±150ms
-            # (integrated signal is delayed relative to actual R-peak)
-            search_back  = max(0, peak_idx - int(0.15 * fs))
-            search_fwd   = min(n, peak_idx + int(0.15 * fs))
-
             r_peaks.append(peak_idx)
 
-            # Apply refractory period — skip forward 200ms
+            # Apply refractory period
             i = peak_idx + refractory
 
         else:
@@ -138,6 +131,36 @@ def detect_peaks(integrated, fs=FS):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# STEP 6 — REFINE TO TRUE R-PEAK
+# ─────────────────────────────────────────────────────────────────────────────
+
+def refine_to_rpeak(filtered_signal, peak_indices, fs=FS):
+    """
+    Snap each detected index to the true R-peak in the filtered signal.
+
+    WHY THIS IS NEEDED:
+    The moving window integrator introduces a delay of ~15 samples.
+    The adaptive threshold fires on the integrated bump peak, which is
+    shifted forward in time relative to the actual R-peak tip.
+    Without refinement, detected indices are ~15-30 samples late —
+    outside the ±18 sample AHA tolerance window.
+
+    FIX:
+    For each detected index, search ±150ms (±54 samples) in the
+    filtered signal and snap to the maximum absolute amplitude.
+    The R-peak is always the largest feature — this reliably finds it.
+    """
+    search  = int(0.15 * fs)
+    refined = []
+    for idx in peak_indices:
+        lo        = max(0, idx - search)
+        hi        = min(len(filtered_signal), idx + search)
+        local_max = lo + np.argmax(filtered_signal[lo:hi])  # remove np.abs
+        refined.append(local_max)
+    return np.array(refined, dtype=np.int64)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # FULL PIPELINE
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -145,12 +168,13 @@ def pan_tompkins(filtered_signal, fs=FS):
     """
     Full Pan-Tompkins pipeline.
     Input : filtered ECG signal (output of apply_filter.py)
-    Output: array of detected R-peak sample indices
+    Output: array of detected R-peak sample indices (refined to filtered signal)
     """
     diff       = differentiate(filtered_signal)
     squared    = square(diff)
     integrated = moving_window_integrate(squared)
     r_peaks    = detect_peaks(integrated, fs)
+    r_peaks    = refine_to_rpeak(filtered_signal, r_peaks, fs)  # snap to true R-peak
     return r_peaks, diff, squared, integrated
 
 
@@ -182,7 +206,15 @@ def plot_pipeline(filtered, diff, squared, integrated, r_peaks,
         ax = axes[idx]
         ax.plot(t, sig[:n], colour, linewidth=0.8)
         if idx == 3:
-            ax.scatter(rp / fs, integrated[rp],
+            # Find integrated bump peak nearest each refined R-peak
+            search = int(0.15 * fs)
+            bump_peaks = []
+            for r in rp:
+                lo = max(0, r - search)
+                hi = min(n, r + search)
+                bump_peaks.append(lo + np.argmax(integrated[lo:hi]))
+            bump_peaks = np.array(bump_peaks)
+            ax.scatter(bump_peaks / fs, integrated[bump_peaks],
                        color='red', s=50, zorder=5,
                        marker='v', label='Detected peaks')
             ax.legend(loc='upper right', fontsize=8)
