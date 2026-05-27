@@ -1,0 +1,11 @@
+0.7
+2020.2
+Nov 14 2025
+19:37:27
+D:/Project_3/ecg_accelerator/ecg_accelerator.sim/sim_1/behav/xsim/glbl.v,1756381829,verilog,,,,glbl,,uvm,,,,,,
+D:/Project_3/rtl/differentiator.sv,1779869992,systemVerilog,,D:/Project_3/tb/tb_differentiator.sv,,differentiator,,uvm,../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef,,,,,
+D:/Project_3/rtl/fir_filter.sv,1779781244,systemVerilog,,D:/Project_3/tb/tb_fir_filter.sv,,fir_filter,,uvm,../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef,,,,,
+D:/Project_3/rtl/squarer.sv,1779869989,systemVerilog,,D:/Project_3/tb/tb_squarer.sv,,squarer,,uvm,../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef,,,,,
+D:/Project_3/tb/tb_differentiator.sv,1779871905,systemVerilog,,,,tb_differentiator,,uvm,../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef,,,,,
+D:/Project_3/tb/tb_fir_filter.sv,1779781434,systemVerilog,,,,tb_fir_filter,,uvm,../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef,,,,,
+D:/Project_3/tb/tb_squarer.sv,1779872193,systemVerilog,,,,tb_squarer,,uvm,../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef,,,,,
