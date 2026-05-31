@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef" \
+"../../../../../rtl/differentiator.sv" \
+"../../../../../rtl/ecg_top.sv" \
+"../../../../../rtl/fir_filter.sv" \
+"../../../../../rtl/mad_classifier.sv" \
+"../../../../../rtl/mwi.sv" \
+"../../../../../rtl/rr_counter.sv" \
+"../../../../../rtl/squarer.sv" \
+"../../../../../rtl/threshold_fsm.sv" \
+"../../../../../tb/tb_ecg_top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
