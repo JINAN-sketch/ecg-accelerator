@@ -102,7 +102,7 @@ module tb_ecg_top;
         $display("  Final classification: %0b", classification);
 
         if (det_count >= 10 && det_count <= 20)
-            $display(" RESULT: PASS - correct peak count and Normal classification");
+            $display(" RESULT: PASS - correct peak count and Normal sclassification");
         else
             $display("  RESULT: FAIL - unexpected peak count");
         $display("==============================================");

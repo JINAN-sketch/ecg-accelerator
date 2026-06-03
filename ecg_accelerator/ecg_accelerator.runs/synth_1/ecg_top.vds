@@ -1,0 +1,543 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Jun  3 12:37:00 2026
+# Process ID         : 26588
+# Current directory  : D:/Project_3/ecg_accelerator/ecg_accelerator.runs/synth_1
+# Command line       : vivado.exe -log ecg_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ecg_top.tcl
+# Log file           : D:/Project_3/ecg_accelerator/ecg_accelerator.runs/synth_1/ecg_top.vds
+# Journal file       : D:/Project_3/ecg_accelerator/ecg_accelerator.runs/synth_1\vivado.jou
+# Running On         : JINAN-Zephyrus
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 185H
+# CPU Frequency      : 3072 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 22
+# Host memory        : 16556 MB
+# Swap memory        : 24696 MB
+# Total Virtual      : 41252 MB
+# Available Virtual  : 20790 MB
+#-----------------------------------------------------------
+source ecg_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental D:/Project_3/ecg_accelerator/ecg_accelerator.srcs/utils_1/imports/synth_1/ecg_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Project_3/ecg_accelerator/ecg_accelerator.srcs/utils_1/imports/synth_1/ecg_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top ecg_top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14936
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1264.547 ; gain = 543.098
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ecg_top' [D:/Project_3/rtl/ecg_top.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'fir_filter' [D:/Project_3/rtl/fir_filter.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'fir_filter' (0#1) [D:/Project_3/rtl/fir_filter.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'differentiator' [D:/Project_3/rtl/differentiator.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'differentiator' (0#1) [D:/Project_3/rtl/differentiator.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'squarer' [D:/Project_3/rtl/squarer.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'squarer' (0#1) [D:/Project_3/rtl/squarer.sv:20]
+INFO: [Synth 8-6157] synthesizing module 'mwi' [D:/Project_3/rtl/mwi.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'mwi' (0#1) [D:/Project_3/rtl/mwi.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'threshold_fsm' [D:/Project_3/rtl/threshold_fsm.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'threshold_fsm' (0#1) [D:/Project_3/rtl/threshold_fsm.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'rr_counter' [D:/Project_3/rtl/rr_counter.sv:16]
+INFO: [Synth 8-6155] done synthesizing module 'rr_counter' (0#1) [D:/Project_3/rtl/rr_counter.sv:16]
+INFO: [Synth 8-6157] synthesizing module 'mad_classifier' [D:/Project_3/rtl/mad_classifier.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'mad_classifier' (0#1) [D:/Project_3/rtl/mad_classifier.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'ecg_top' (0#1) [D:/Project_3/rtl/ecg_top.sv:19]
+WARNING: [Synth 8-6014] Unused sequential element acc_reg was removed.  [D:/Project_3/rtl/fir_filter.sv:113]
+WARNING: [Synth 8-6014] Unused sequential element prod_reg was removed.  [D:/Project_3/rtl/fir_filter.sv:115]
+WARNING: [Synth 8-6014] Unused sequential element acc_reg was removed.  [D:/Project_3/rtl/differentiator.sv:63]
+WARNING: [Synth 8-6014] Unused sequential element shifted_reg was removed.  [D:/Project_3/rtl/differentiator.sv:69]
+WARNING: [Synth 8-6014] Unused sequential element product_reg was removed.  [D:/Project_3/rtl/squarer.sv:41]
+WARNING: [Synth 8-6014] Unused sequential element shifted_reg was removed.  [D:/Project_3/rtl/squarer.sv:44]
+WARNING: [Synth 8-6014] Unused sequential element product_reg was removed.  [D:/Project_3/rtl/mwi.sv:39]
+WARNING: [Synth 8-6014] Unused sequential element shifted_reg was removed.  [D:/Project_3/rtl/mwi.sv:40]
+WARNING: [Synth 8-6014] Unused sequential element nl_update_reg was removed.  [D:/Project_3/rtl/threshold_fsm.sv:94]
+WARNING: [Synth 8-6014] Unused sequential element diff_reg was removed.  [D:/Project_3/rtl/threshold_fsm.sv:99]
+WARNING: [Synth 8-6014] Unused sequential element thresh_update_reg was removed.  [D:/Project_3/rtl/threshold_fsm.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element sl_update_reg was removed.  [D:/Project_3/rtl/threshold_fsm.sv:122]
+WARNING: [Synth 8-6014] Unused sequential element rr_sum_reg was removed.  [D:/Project_3/rtl/mad_classifier.sv:72]
+WARNING: [Synth 8-6014] Unused sequential element mean_rr_reg was removed.  [D:/Project_3/rtl/mad_classifier.sv:77]
+WARNING: [Synth 8-6014] Unused sequential element abs_dev_reg was removed.  [D:/Project_3/rtl/mad_classifier.sv:81]
+WARNING: [Synth 8-6014] Unused sequential element dev_sum_reg was removed.  [D:/Project_3/rtl/mad_classifier.sv:84]
+WARNING: [Synth 8-6014] Unused sequential element mad_reg was removed.  [D:/Project_3/rtl/mad_classifier.sv:96]
+WARNING: [Synth 8-6014] Unused sequential element nv_num_reg was removed.  [D:/Project_3/rtl/mad_classifier.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element nv_result_reg was removed.  [D:/Project_3/rtl/mad_classifier.sv:101]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1391.129 ; gain = 669.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1391.129 ; gain = 669.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1391.129 ; gain = 669.680
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1391.129 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Project_3/syn/ecp_top.xdc]
+WARNING: [Constraints 18-6211] Setting input delay on a clock pin 'clk' relative to clock 'clk' defined on the same pin is not supported, ignoring it [D:/Project_3/syn/ecp_top.xdc:10]
+Finished Parsing XDC File [D:/Project_3/syn/ecp_top.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1466.520 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1466.520 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1466.520 ; gain = 745.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1466.520 ; gain = 745.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1466.520 ; gain = 745.070
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'threshold_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                  RISING |                               01 |                               01
+                    PEAK |                               10 |                               10
+              REFRACTORY |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'threshold_fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1466.520 ; gain = 745.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	  33 Input   32 Bit       Adders := 1     
+	   4 Input   32 Bit       Adders := 1     
+	   5 Input   19 Bit       Adders := 1     
+	   8 Input   19 Bit       Adders := 2     
+	   4 Input   16 Bit       Adders := 2     
+	   3 Input   16 Bit       Adders := 9     
+	   5 Input   16 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 55    
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Multipliers : 
+	              12x32  Multipliers := 1     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 28    
+	   4 Input   16 Bit        Muxes := 1     
+	   4 Input    7 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 6     
+	   4 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP sample_out35, operation Mode is: A''*(B:0x3ffc2).
+DSP Report: register shift_reg_reg[0] is absorbed into DSP sample_out35.
+DSP Report: register shift_reg_reg[1] is absorbed into DSP sample_out35.
+DSP Report: operator sample_out35 is absorbed into DSP sample_out35.
+DSP Report: Generating DSP sample_out35, operation Mode is: A2*(B:0x3ffc5).
+DSP Report: register shift_reg_reg[0] is absorbed into DSP sample_out35.
+DSP Report: operator sample_out35 is absorbed into DSP sample_out35.
+DSP Report: Generating DSP sample_out34, operation Mode is: ACIN''*(B:0x3ffd8).
+DSP Report: register shift_reg_reg[1] is absorbed into DSP sample_out34.
+DSP Report: register shift_reg_reg[2] is absorbed into DSP sample_out34.
+DSP Report: operator sample_out34 is absorbed into DSP sample_out34.
+DSP Report: Generating DSP sample_out33, operation Mode is: ACIN2*(B:0x1d).
+DSP Report: register shift_reg_reg[3] is absorbed into DSP sample_out33.
+DSP Report: operator sample_out33 is absorbed into DSP sample_out33.
+DSP Report: Generating DSP sample_out32, operation Mode is: ACIN2*(B:0x8e).
+DSP Report: register shift_reg_reg[4] is absorbed into DSP sample_out32.
+DSP Report: operator sample_out32 is absorbed into DSP sample_out32.
+DSP Report: Generating DSP sample_out31, operation Mode is: ACIN2*(B:0xf0).
+DSP Report: register shift_reg_reg[5] is absorbed into DSP sample_out31.
+DSP Report: operator sample_out31 is absorbed into DSP sample_out31.
+DSP Report: Generating DSP sample_out30, operation Mode is: ACIN2*(B:0xd3).
+DSP Report: register shift_reg_reg[6] is absorbed into DSP sample_out30.
+DSP Report: operator sample_out30 is absorbed into DSP sample_out30.
+DSP Report: Generating DSP sample_out29, operation Mode is: ACIN2*(B:0x3ffd7).
+DSP Report: register shift_reg_reg[7] is absorbed into DSP sample_out29.
+DSP Report: operator sample_out29 is absorbed into DSP sample_out29.
+DSP Report: Generating DSP sample_out28, operation Mode is: ACIN2*(B:0x3fe09).
+DSP Report: register shift_reg_reg[8] is absorbed into DSP sample_out28.
+DSP Report: operator sample_out28 is absorbed into DSP sample_out28.
+DSP Report: Generating DSP sample_out27, operation Mode is: ACIN2*(B:0x3fc29).
+DSP Report: register shift_reg_reg[9] is absorbed into DSP sample_out27.
+DSP Report: operator sample_out27 is absorbed into DSP sample_out27.
+DSP Report: Generating DSP sample_out26, operation Mode is: ACIN2*(B:0x3fb87).
+DSP Report: register shift_reg_reg[10] is absorbed into DSP sample_out26.
+DSP Report: operator sample_out26 is absorbed into DSP sample_out26.
+DSP Report: Generating DSP sample_out25, operation Mode is: ACIN2*(B:0x3fd7f).
+DSP Report: register shift_reg_reg[11] is absorbed into DSP sample_out25.
+DSP Report: operator sample_out25 is absorbed into DSP sample_out25.
+DSP Report: Generating DSP sample_out24, operation Mode is: ACIN2*(B:0x2b6).
+DSP Report: register shift_reg_reg[12] is absorbed into DSP sample_out24.
+DSP Report: operator sample_out24 is absorbed into DSP sample_out24.
+DSP Report: Generating DSP sample_out23, operation Mode is: ACIN2*(B:0xa8b).
+DSP Report: register shift_reg_reg[13] is absorbed into DSP sample_out23.
+DSP Report: operator sample_out23 is absorbed into DSP sample_out23.
+DSP Report: Generating DSP sample_out22, operation Mode is: ACIN2*(B:0x130e).
+DSP Report: register shift_reg_reg[14] is absorbed into DSP sample_out22.
+DSP Report: operator sample_out22 is absorbed into DSP sample_out22.
+DSP Report: Generating DSP sample_out21, operation Mode is: ACIN2*(B:0x19a8).
+DSP Report: register shift_reg_reg[15] is absorbed into DSP sample_out21.
+DSP Report: operator sample_out21 is absorbed into DSP sample_out21.
+DSP Report: Generating DSP sample_out20, operation Mode is: ACIN2*(B:0x1c24).
+DSP Report: register shift_reg_reg[16] is absorbed into DSP sample_out20.
+DSP Report: operator sample_out20 is absorbed into DSP sample_out20.
+DSP Report: Generating DSP sample_out19, operation Mode is: ACIN2*(B:0x19a8).
+DSP Report: register shift_reg_reg[17] is absorbed into DSP sample_out19.
+DSP Report: operator sample_out19 is absorbed into DSP sample_out19.
+DSP Report: Generating DSP sample_out18, operation Mode is: ACIN2*(B:0x130e).
+DSP Report: register shift_reg_reg[18] is absorbed into DSP sample_out18.
+DSP Report: operator sample_out18 is absorbed into DSP sample_out18.
+DSP Report: Generating DSP sample_out17, operation Mode is: ACIN2*(B:0xa8b).
+DSP Report: register shift_reg_reg[19] is absorbed into DSP sample_out17.
+DSP Report: operator sample_out17 is absorbed into DSP sample_out17.
+DSP Report: Generating DSP sample_out16, operation Mode is: ACIN2*(B:0x2b6).
+DSP Report: register shift_reg_reg[20] is absorbed into DSP sample_out16.
+DSP Report: operator sample_out16 is absorbed into DSP sample_out16.
+DSP Report: Generating DSP sample_out15, operation Mode is: ACIN2*(B:0x3fd7f).
+DSP Report: register shift_reg_reg[21] is absorbed into DSP sample_out15.
+DSP Report: operator sample_out15 is absorbed into DSP sample_out15.
+DSP Report: Generating DSP sample_out14, operation Mode is: ACIN2*(B:0x3fb87).
+DSP Report: register shift_reg_reg[22] is absorbed into DSP sample_out14.
+DSP Report: operator sample_out14 is absorbed into DSP sample_out14.
+DSP Report: Generating DSP sample_out13, operation Mode is: ACIN2*(B:0x3fc29).
+DSP Report: register shift_reg_reg[23] is absorbed into DSP sample_out13.
+DSP Report: operator sample_out13 is absorbed into DSP sample_out13.
+DSP Report: Generating DSP sample_out12, operation Mode is: ACIN2*(B:0x3fe09).
+DSP Report: register shift_reg_reg[24] is absorbed into DSP sample_out12.
+DSP Report: operator sample_out12 is absorbed into DSP sample_out12.
+DSP Report: Generating DSP sample_out11, operation Mode is: ACIN2*(B:0x3ffd7).
+DSP Report: register shift_reg_reg[25] is absorbed into DSP sample_out11.
+DSP Report: operator sample_out11 is absorbed into DSP sample_out11.
+DSP Report: Generating DSP sample_out10, operation Mode is: ACIN2*(B:0xd3).
+DSP Report: register shift_reg_reg[26] is absorbed into DSP sample_out10.
+DSP Report: operator sample_out10 is absorbed into DSP sample_out10.
+DSP Report: Generating DSP sample_out9, operation Mode is: ACIN2*(B:0xf0).
+DSP Report: register shift_reg_reg[27] is absorbed into DSP sample_out9.
+DSP Report: operator sample_out9 is absorbed into DSP sample_out9.
+DSP Report: Generating DSP sample_out8, operation Mode is: ACIN2*(B:0x8e).
+DSP Report: register shift_reg_reg[28] is absorbed into DSP sample_out8.
+DSP Report: operator sample_out8 is absorbed into DSP sample_out8.
+DSP Report: Generating DSP sample_out7, operation Mode is: ACIN2*(B:0x1d).
+DSP Report: register shift_reg_reg[29] is absorbed into DSP sample_out7.
+DSP Report: operator sample_out7 is absorbed into DSP sample_out7.
+DSP Report: Generating DSP sample_out6, operation Mode is: ACIN2*(B:0x3ffd8).
+DSP Report: register shift_reg_reg[30] is absorbed into DSP sample_out6.
+DSP Report: operator sample_out6 is absorbed into DSP sample_out6.
+DSP Report: Generating DSP sample_out5, operation Mode is: ACIN2*(B:0x3ffc2).
+DSP Report: register shift_reg_reg[31] is absorbed into DSP sample_out5.
+DSP Report: operator sample_out5 is absorbed into DSP sample_out5.
+DSP Report: Generating DSP sample_out4, operation Mode is: ACIN2*(B:0x3ffc5).
+DSP Report: register shift_reg_reg[32] is absorbed into DSP sample_out4.
+DSP Report: operator sample_out4 is absorbed into DSP sample_out4.
+DSP Report: Generating DSP y_out3, operation Mode is: A*B.
+DSP Report: operator y_out3 is absorbed into DSP y_out3.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1466.520 ; gain = 745.070
+---------------------------------------------------------------------------------
+ Sort Area is  sample_out35_0 : 0 0 : 211 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 1 : 245 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 2 : 287 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 3 : 486 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 4 : 486 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 5 : 486 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 6 : 211 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 7 : 396 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 8 : 495 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 9 : 589 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 10 : 495 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 11 : 495 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 12 : 824 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 13 : 952 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 14 : 952 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 15 : 952 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 16 : 952 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 17 : 952 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 18 : 824 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 19 : 495 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 20 : 495 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 21 : 589 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 22 : 495 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 23 : 396 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 24 : 211 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 25 : 486 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 26 : 486 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 27 : 486 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 28 : 287 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 29 : 211 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 30 : 211 16349 : Used 1 time 0
+ Sort Area is  sample_out35_0 : 0 31 : 211 16349 : Used 1 time 0
+ Sort Area is  y_out3_b : 0 0 : 1937 1937 : Used 1 time 0
+ Sort Area is  sample_out35_a : 0 0 : 245 245 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir_filter  | A''*(B:0x3ffc2)    | 16     | 7      | -      | -      | 23     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A2*(B:0x3ffc5)     | 16     | 7      | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN''*(B:0x3ffd8) | 16     | 7      | -      | -      | 23     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x1d)     | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x8e)     | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0xf0)     | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0xd3)     | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x3ffd7)  | 16     | 7      | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x3fe09)  | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x3fc29)  | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x3fb87)  | 16     | 12     | -      | -      | 28     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x3fd7f)  | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x2b6)    | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0xa8b)    | 16     | 13     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x130e)   | 16     | 14     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x19a8)   | 16     | 14     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x1c24)   | 16     | 14     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x19a8)   | 16     | 14     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x130e)   | 16     | 14     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0xa8b)    | 16     | 13     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x2b6)    | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x3fd7f)  | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x3fb87)  | 16     | 12     | -      | -      | 28     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x3fc29)  | 16     | 11     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x3fe09)  | 16     | 10     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x3ffd7)  | 16     | 7      | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0xd3)     | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0xf0)     | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x8e)     | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x1d)     | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x3ffd8)  | 16     | 7      | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x3ffc2)  | 16     | 7      | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | ACIN2*(B:0x3ffc5)  | 16     | 7      | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|squarer     | A*B                | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1662.586 ; gain = 941.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1741.418 ; gain = 1019.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1741.586 ; gain = 1020.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1960.742 ; gain = 1239.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1960.742 ; gain = 1239.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1960.742 ; gain = 1239.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1960.742 ; gain = 1239.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1960.742 ; gain = 1239.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1960.742 ; gain = 1239.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|ecg_top     | u_mwi/sr_reg[29][15] | 30     | 16    | YES          | NO                 | YES               | 0      | 16      | 
++------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir_filter  | A''*B       | 30     | 18     | -      | -      | 23     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 30     | 18     | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A''*B       | 0      | 18     | -      | -      | 23     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 8      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 8      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 8      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 18     | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 18     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 18     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 18     | -      | -      | 28     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 18     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 10     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 12     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 13     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 13     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 13     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 13     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 13     | -      | -      | 30     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 12     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 10     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 18     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 18     | -      | -      | 28     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 18     | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 18     | -      | -      | 26     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 18     | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 8      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 8      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 8      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 18     | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 18     | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir_filter  | A'*B        | 0      | 18     | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|squarer     | A'*B'       | 30     | 18     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   411|
+|3     |DSP48E1 |    34|
+|8     |LUT1    |   115|
+|9     |LUT2    |   450|
+|10    |LUT3    |   966|
+|11    |LUT4    |   590|
+|12    |LUT5    |    91|
+|13    |LUT6    |    86|
+|14    |SRLC32E |    16|
+|15    |FDRE    |   490|
+|16    |FDSE    |     9|
+|17    |IBUF    |    19|
+|18    |OBUF    |    35|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1960.742 ; gain = 1239.293
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 1960.742 ; gain = 1163.902
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1960.742 ; gain = 1239.293
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1969.934 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 445 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1973.582 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: a7a06fc0
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1973.582 ; gain = 1436.559
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1973.582 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Project_3/ecg_accelerator/ecg_accelerator.runs/synth_1/ecg_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file ecg_top_utilization_synth.rpt -pb ecg_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  3 12:37:45 2026...

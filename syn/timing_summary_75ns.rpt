@@ -1,0 +1,861 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Wed Jun  3 12:32:03 2026
+| Host         : JINAN-Zephyrus running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -file D:/Project_3/syn/timing_summary_75ns.rpt
+| Design       : ecg_top
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (0)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (0)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -0.695       -0.695                      1                 2599        0.101        0.000                      0                 2599       36.520        0.000                       0                   518  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk    {0.000 37.500}     75.000          13.333          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk                -0.695       -0.695                      1                 2599        0.101        0.000                      0                 2599       36.520        0.000                       0                   518  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :            1  Failing Endpoint ,  Worst Slack       -0.695ns,  Total Violation       -0.695ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.101ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       36.520ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -0.695ns  (required time - arrival time)
+  Source:                 u_mad/rr_buf_reg[5][2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@37.500ns period=75.000ns})
+  Destination:            u_mad/nv_q15_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@37.500ns period=75.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            75.000ns  (clk rise@75.000ns - clk rise@0.000ns)
+  Data Path Delay:        75.544ns  (logic 49.629ns (65.696%)  route 25.915ns (34.305%))
+  Logic Levels:           183  (CARRY4=168 LUT2=2 LUT3=5 LUT4=3 LUT5=3 LUT6=2)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.079ns = ( 77.079 - 75.000 ) 
+    Source Clock Delay      (SCD):    2.402ns
+    Clock Pessimism Removal (CPR):    0.178ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+                         IBUF (Prop_ibuf_I_O)         0.923     0.923 r  clk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.800     1.722    clk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.096     1.818 r  clk_IBUF_BUFG_inst/O
+                         net (fo=549, unplaced)       0.584     2.402    u_mad/clk_IBUF_BUFG
+                         FDRE                                         r  u_mad/rr_buf_reg[5][2]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456     2.858 r  u_mad/rr_buf_reg[5][2]/Q
+                         net (fo=7, unplaced)         0.776     3.634    u_mad/rr_buf_reg[5]_5[2]
+                         LUT3 (Prop_lut3_I0_O)        0.324     3.958 r  u_mad/classification[1]_i_92/O
+                         net (fo=2, unplaced)         0.517     4.475    u_mad/classification[1]_i_92_n_0
+                         LUT4 (Prop_lut4_I3_O)        0.331     4.806 r  u_mad/classification[1]_i_95/O
+                         net (fo=1, unplaced)         0.000     4.806    u_mad/classification[1]_i_95_n_0
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     5.182 r  u_mad/classification_reg[1]_i_56/CO[3]
+                         net (fo=1, unplaced)         0.009     5.191    u_mad/classification_reg[1]_i_56_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.308 r  u_mad/classification_reg[1]_i_52/CO[3]
+                         net (fo=1, unplaced)         0.000     5.308    u_mad/classification_reg[1]_i_52_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.337     5.645 r  u_mad/classification_reg[1]_i_62/O[1]
+                         net (fo=3, unplaced)         0.629     6.274    u_mad/classification_reg[1]_i_62_n_6
+                         LUT3 (Prop_lut3_I1_O)        0.306     6.580 r  u_mad/classification[1]_i_65/O
+                         net (fo=2, unplaced)         0.460     7.040    u_mad/classification[1]_i_65_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.164 r  u_mad/classification[1]_i_32/O
+                         net (fo=2, unplaced)         0.460     7.624    u_mad/classification[1]_i_32_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     7.748 r  u_mad/classification[1]_i_36/O
+                         net (fo=1, unplaced)         0.000     7.748    u_mad/classification[1]_i_36_n_0
+                         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     8.128 r  u_mad/classification_reg[1]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     8.128    u_mad/classification_reg[1]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.337     8.465 f  u_mad/classification_reg[1]_i_11/O[1]
+                         net (fo=57, unplaced)        0.697     9.162    u_mad/p_1_in[10]
+                         LUT4 (Prop_lut4_I1_O)        0.332     9.494 r  u_mad/nv_q15[15]_i_608/O
+                         net (fo=1, unplaced)         0.000     9.494    u_mad/nv_q15[15]_i_608_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.547    10.041 r  u_mad/nv_q15_reg[15]_i_513/CO[3]
+                         net (fo=15, unplaced)        0.971    11.012    u_mad/nv_q15_reg[15]_i_513_n_0
+                         LUT2 (Prop_lut2_I0_O)        0.116    11.128 r  u_mad/nv_q15[15]_i_374/O
+                         net (fo=1, unplaced)         0.000    11.128    u_mad/nv_q15[15]_i_374_n_0
+                         CARRY4 (Prop_carry4_DI[0]_O[2])
+                                                      0.622    11.750 r  u_mad/nv_q15_reg[15]_i_295/O[2]
+                         net (fo=2, unplaced)         0.916    12.666    u_mad/p_1_out3_in[2]
+                         LUT3 (Prop_lut3_I0_O)        0.330    12.996 r  u_mad/nv_q15[15]_i_210/O
+                         net (fo=2, unplaced)         0.517    13.513    u_mad/nv_q15[15]_i_210_n_0
+                         LUT4 (Prop_lut4_I3_O)        0.331    13.844 r  u_mad/nv_q15[15]_i_213/O
+                         net (fo=1, unplaced)         0.000    13.844    u_mad/nv_q15[15]_i_213_n_0
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    14.220 r  u_mad/nv_q15_reg[15]_i_160/CO[3]
+                         net (fo=1, unplaced)         0.009    14.229    u_mad/nv_q15_reg[15]_i_160_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    14.346 r  u_mad/nv_q15_reg[15]_i_174/CO[3]
+                         net (fo=1, unplaced)         0.000    14.346    u_mad/nv_q15_reg[15]_i_174_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    14.463 r  u_mad/nv_q15_reg[15]_i_289/CO[3]
+                         net (fo=1, unplaced)         0.000    14.463    u_mad/nv_q15_reg[15]_i_289_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.337    14.800 r  u_mad/nv_q15_reg[15]_i_683/O[1]
+                         net (fo=3, unplaced)         0.629    15.429    u_mad/nv_q15_reg[15]_i_683_n_6
+                         LUT3 (Prop_lut3_I0_O)        0.306    15.735 r  u_mad/nv_q15[15]_i_686/O
+                         net (fo=2, unplaced)         0.460    16.195    u_mad/nv_q15[15]_i_686_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124    16.319 r  u_mad/nv_q15[15]_i_550/O
+                         net (fo=2, unplaced)         0.460    16.779    u_mad/nv_q15[15]_i_550_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    16.903 r  u_mad/nv_q15[15]_i_554/O
+                         net (fo=1, unplaced)         0.000    16.903    u_mad/nv_q15[15]_i_554_n_0
+                         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380    17.283 r  u_mad/nv_q15_reg[15]_i_503/CO[3]
+                         net (fo=1, unplaced)         0.000    17.283    u_mad/nv_q15_reg[15]_i_503_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256    17.539 r  u_mad/nv_q15_reg[15]_i_808/O[2]
+                         net (fo=2, unplaced)         0.463    18.002    u_mad/nv_result1[18]
+                         LUT2 (Prop_lut2_I1_O)        0.301    18.303 r  u_mad/nv_q15[15]_i_917/O
+                         net (fo=1, unplaced)         0.000    18.303    u_mad/nv_q15[15]_i_917_n_0
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    18.816 r  u_mad/nv_q15_reg[15]_i_832/CO[3]
+                         net (fo=1, unplaced)         0.009    18.825    u_mad/nv_q15_reg[15]_i_832_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    18.942 r  u_mad/nv_q15_reg[15]_i_827/CO[3]
+                         net (fo=1, unplaced)         0.000    18.942    u_mad/nv_q15_reg[15]_i_827_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.059 r  u_mad/nv_q15_reg[15]_i_822/CO[3]
+                         net (fo=1, unplaced)         0.000    19.059    u_mad/nv_q15_reg[15]_i_822_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    19.176 r  u_mad/nv_q15_reg[15]_i_819/CO[3]
+                         net (fo=1, unplaced)         0.000    19.176    u_mad/nv_q15_reg[15]_i_819_n_0
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    19.457 r  u_mad/nv_q15_reg[15]_i_818/CO[0]
+                         net (fo=19, unplaced)        0.370    19.827    u_mad/nv_q15_reg[15]_i_818_n_3
+                         LUT3 (Prop_lut3_I0_O)        0.367    20.194 r  u_mad/nv_q15[15]_i_839/O
+                         net (fo=1, unplaced)         0.000    20.194    u_mad/nv_q15[15]_i_839_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    20.727 r  u_mad/nv_q15_reg[15]_i_803/CO[3]
+                         net (fo=1, unplaced)         0.009    20.736    u_mad/nv_q15_reg[15]_i_803_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    20.853 r  u_mad/nv_q15_reg[15]_i_798/CO[3]
+                         net (fo=1, unplaced)         0.000    20.853    u_mad/nv_q15_reg[15]_i_798_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    20.970 r  u_mad/nv_q15_reg[15]_i_793/CO[3]
+                         net (fo=1, unplaced)         0.000    20.970    u_mad/nv_q15_reg[15]_i_793_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    21.087 r  u_mad/nv_q15_reg[15]_i_790/CO[3]
+                         net (fo=1, unplaced)         0.000    21.087    u_mad/nv_q15_reg[15]_i_790_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    21.266 r  u_mad/nv_q15_reg[15]_i_789/CO[1]
+                         net (fo=19, unplaced)        0.584    21.850    u_mad/nv_q15_reg[15]_i_789_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    22.653 r  u_mad/nv_q15_reg[15]_i_751/CO[3]
+                         net (fo=1, unplaced)         0.009    22.662    u_mad/nv_q15_reg[15]_i_751_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    22.779 r  u_mad/nv_q15_reg[15]_i_746/CO[3]
+                         net (fo=1, unplaced)         0.000    22.779    u_mad/nv_q15_reg[15]_i_746_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    22.896 r  u_mad/nv_q15_reg[15]_i_741/CO[3]
+                         net (fo=1, unplaced)         0.000    22.896    u_mad/nv_q15_reg[15]_i_741_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    23.013 r  u_mad/nv_q15_reg[15]_i_738/CO[3]
+                         net (fo=1, unplaced)         0.000    23.013    u_mad/nv_q15_reg[15]_i_738_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    23.192 r  u_mad/nv_q15_reg[15]_i_737/CO[1]
+                         net (fo=19, unplaced)        0.584    23.776    u_mad/nv_q15_reg[15]_i_737_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    24.579 r  u_mad/nv_q15_reg[15]_i_673/CO[3]
+                         net (fo=1, unplaced)         0.009    24.588    u_mad/nv_q15_reg[15]_i_673_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    24.705 r  u_mad/nv_q15_reg[15]_i_668/CO[3]
+                         net (fo=1, unplaced)         0.000    24.705    u_mad/nv_q15_reg[15]_i_668_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    24.822 r  u_mad/nv_q15_reg[15]_i_663/CO[3]
+                         net (fo=1, unplaced)         0.000    24.822    u_mad/nv_q15_reg[15]_i_663_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    24.939 r  u_mad/nv_q15_reg[15]_i_660/CO[3]
+                         net (fo=1, unplaced)         0.000    24.939    u_mad/nv_q15_reg[15]_i_660_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    25.118 r  u_mad/nv_q15_reg[15]_i_659/CO[1]
+                         net (fo=19, unplaced)        0.584    25.702    u_mad/nv_q15_reg[15]_i_659_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    26.505 r  u_mad/nv_q15_reg[15]_i_541/CO[3]
+                         net (fo=1, unplaced)         0.009    26.514    u_mad/nv_q15_reg[15]_i_541_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    26.631 r  u_mad/nv_q15_reg[15]_i_536/CO[3]
+                         net (fo=1, unplaced)         0.000    26.631    u_mad/nv_q15_reg[15]_i_536_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    26.748 r  u_mad/nv_q15_reg[15]_i_531/CO[3]
+                         net (fo=1, unplaced)         0.000    26.748    u_mad/nv_q15_reg[15]_i_531_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    26.865 r  u_mad/nv_q15_reg[15]_i_528/CO[3]
+                         net (fo=1, unplaced)         0.000    26.865    u_mad/nv_q15_reg[15]_i_528_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    27.044 r  u_mad/nv_q15_reg[15]_i_527/CO[1]
+                         net (fo=19, unplaced)        0.584    27.628    u_mad/nv_q15_reg[15]_i_527_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    28.431 r  u_mad/nv_q15_reg[15]_i_498/CO[3]
+                         net (fo=1, unplaced)         0.009    28.440    u_mad/nv_q15_reg[15]_i_498_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    28.557 r  u_mad/nv_q15_reg[15]_i_493/CO[3]
+                         net (fo=1, unplaced)         0.000    28.557    u_mad/nv_q15_reg[15]_i_493_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    28.674 r  u_mad/nv_q15_reg[15]_i_488/CO[3]
+                         net (fo=1, unplaced)         0.000    28.674    u_mad/nv_q15_reg[15]_i_488_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    28.791 r  u_mad/nv_q15_reg[15]_i_485/CO[3]
+                         net (fo=1, unplaced)         0.000    28.791    u_mad/nv_q15_reg[15]_i_485_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    28.970 r  u_mad/nv_q15_reg[15]_i_484/CO[1]
+                         net (fo=19, unplaced)        0.584    29.554    u_mad/nv_q15_reg[15]_i_484_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    30.357 r  u_mad/nv_q15_reg[15]_i_331/CO[3]
+                         net (fo=1, unplaced)         0.009    30.366    u_mad/nv_q15_reg[15]_i_331_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    30.483 r  u_mad/nv_q15_reg[15]_i_326/CO[3]
+                         net (fo=1, unplaced)         0.000    30.483    u_mad/nv_q15_reg[15]_i_326_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    30.600 r  u_mad/nv_q15_reg[15]_i_321/CO[3]
+                         net (fo=1, unplaced)         0.000    30.600    u_mad/nv_q15_reg[15]_i_321_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    30.717 r  u_mad/nv_q15_reg[15]_i_318/CO[3]
+                         net (fo=1, unplaced)         0.000    30.717    u_mad/nv_q15_reg[15]_i_318_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    30.896 r  u_mad/nv_q15_reg[15]_i_317/CO[1]
+                         net (fo=19, unplaced)        0.584    31.480    u_mad/nv_q15_reg[15]_i_317_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    32.283 r  u_mad/nv_q15_reg[15]_i_279/CO[3]
+                         net (fo=1, unplaced)         0.009    32.292    u_mad/nv_q15_reg[15]_i_279_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    32.409 r  u_mad/nv_q15_reg[15]_i_274/CO[3]
+                         net (fo=1, unplaced)         0.000    32.409    u_mad/nv_q15_reg[15]_i_274_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    32.526 r  u_mad/nv_q15_reg[15]_i_269/CO[3]
+                         net (fo=1, unplaced)         0.000    32.526    u_mad/nv_q15_reg[15]_i_269_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    32.643 r  u_mad/nv_q15_reg[15]_i_266/CO[3]
+                         net (fo=1, unplaced)         0.000    32.643    u_mad/nv_q15_reg[15]_i_266_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    32.822 r  u_mad/nv_q15_reg[15]_i_265/CO[1]
+                         net (fo=19, unplaced)        0.584    33.406    u_mad/nv_q15_reg[15]_i_265_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    34.209 r  u_mad/nv_q15_reg[15]_i_194/CO[3]
+                         net (fo=1, unplaced)         0.009    34.218    u_mad/nv_q15_reg[15]_i_194_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    34.335 r  u_mad/nv_q15_reg[15]_i_189/CO[3]
+                         net (fo=1, unplaced)         0.000    34.335    u_mad/nv_q15_reg[15]_i_189_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    34.452 r  u_mad/nv_q15_reg[15]_i_184/CO[3]
+                         net (fo=1, unplaced)         0.000    34.452    u_mad/nv_q15_reg[15]_i_184_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    34.569 r  u_mad/nv_q15_reg[15]_i_181/CO[3]
+                         net (fo=1, unplaced)         0.000    34.569    u_mad/nv_q15_reg[15]_i_181_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    34.748 r  u_mad/nv_q15_reg[15]_i_180/CO[1]
+                         net (fo=19, unplaced)        0.584    35.332    u_mad/nv_q15_reg[15]_i_180_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    36.135 r  u_mad/nv_q15_reg[15]_i_150/CO[3]
+                         net (fo=1, unplaced)         0.009    36.144    u_mad/nv_q15_reg[15]_i_150_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    36.261 r  u_mad/nv_q15_reg[15]_i_145/CO[3]
+                         net (fo=1, unplaced)         0.000    36.261    u_mad/nv_q15_reg[15]_i_145_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    36.378 r  u_mad/nv_q15_reg[15]_i_140/CO[3]
+                         net (fo=1, unplaced)         0.000    36.378    u_mad/nv_q15_reg[15]_i_140_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    36.495 r  u_mad/nv_q15_reg[15]_i_137/CO[3]
+                         net (fo=1, unplaced)         0.000    36.495    u_mad/nv_q15_reg[15]_i_137_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    36.674 r  u_mad/nv_q15_reg[15]_i_136/CO[1]
+                         net (fo=19, unplaced)        0.584    37.258    u_mad/nv_q15_reg[15]_i_136_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    38.061 r  u_mad/nv_q15_reg[15]_i_112/CO[3]
+                         net (fo=1, unplaced)         0.009    38.070    u_mad/nv_q15_reg[15]_i_112_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    38.187 r  u_mad/nv_q15_reg[15]_i_107/CO[3]
+                         net (fo=1, unplaced)         0.000    38.187    u_mad/nv_q15_reg[15]_i_107_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    38.304 r  u_mad/nv_q15_reg[15]_i_102/CO[3]
+                         net (fo=1, unplaced)         0.000    38.304    u_mad/nv_q15_reg[15]_i_102_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    38.421 r  u_mad/nv_q15_reg[15]_i_99/CO[3]
+                         net (fo=1, unplaced)         0.000    38.421    u_mad/nv_q15_reg[15]_i_99_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    38.600 r  u_mad/nv_q15_reg[15]_i_98/CO[1]
+                         net (fo=19, unplaced)        0.584    39.184    u_mad/nv_q15_reg[15]_i_98_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    39.987 r  u_mad/nv_q15_reg[15]_i_79/CO[3]
+                         net (fo=1, unplaced)         0.009    39.996    u_mad/nv_q15_reg[15]_i_79_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    40.113 r  u_mad/nv_q15_reg[15]_i_74/CO[3]
+                         net (fo=1, unplaced)         0.000    40.113    u_mad/nv_q15_reg[15]_i_74_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    40.230 r  u_mad/nv_q15_reg[15]_i_69/CO[3]
+                         net (fo=1, unplaced)         0.000    40.230    u_mad/nv_q15_reg[15]_i_69_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    40.347 r  u_mad/nv_q15_reg[15]_i_66/CO[3]
+                         net (fo=1, unplaced)         0.000    40.347    u_mad/nv_q15_reg[15]_i_66_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    40.526 r  u_mad/nv_q15_reg[15]_i_65/CO[1]
+                         net (fo=19, unplaced)        0.584    41.110    u_mad/nv_q15_reg[15]_i_65_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    41.913 r  u_mad/nv_q15_reg[15]_i_60/CO[3]
+                         net (fo=1, unplaced)         0.009    41.922    u_mad/nv_q15_reg[15]_i_60_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    42.039 r  u_mad/nv_q15_reg[15]_i_44/CO[3]
+                         net (fo=1, unplaced)         0.000    42.039    u_mad/nv_q15_reg[15]_i_44_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    42.156 r  u_mad/nv_q15_reg[15]_i_39/CO[3]
+                         net (fo=1, unplaced)         0.000    42.156    u_mad/nv_q15_reg[15]_i_39_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    42.273 r  u_mad/nv_q15_reg[15]_i_36/CO[3]
+                         net (fo=1, unplaced)         0.000    42.273    u_mad/nv_q15_reg[15]_i_36_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    42.452 r  u_mad/nv_q15_reg[15]_i_35/CO[1]
+                         net (fo=19, unplaced)        0.584    43.036    u_mad/nv_q15_reg[15]_i_35_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    43.839 r  u_mad/nv_q15_reg[15]_i_55/CO[3]
+                         net (fo=1, unplaced)         0.009    43.848    u_mad/nv_q15_reg[15]_i_55_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    43.965 r  u_mad/nv_q15_reg[15]_i_30/CO[3]
+                         net (fo=1, unplaced)         0.000    43.965    u_mad/nv_q15_reg[15]_i_30_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    44.082 r  u_mad/nv_q15_reg[15]_i_19/CO[3]
+                         net (fo=1, unplaced)         0.000    44.082    u_mad/nv_q15_reg[15]_i_19_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    44.199 r  u_mad/nv_q15_reg[15]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.000    44.199    u_mad/nv_q15_reg[15]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    44.378 r  u_mad/nv_q15_reg[15]_i_15/CO[1]
+                         net (fo=19, unplaced)        0.584    44.962    u_mad/nv_q15_reg[15]_i_15_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    45.765 r  u_mad/nv_q15_reg[15]_i_50/CO[3]
+                         net (fo=1, unplaced)         0.009    45.774    u_mad/nv_q15_reg[15]_i_50_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    45.891 r  u_mad/nv_q15_reg[15]_i_25/CO[3]
+                         net (fo=1, unplaced)         0.000    45.891    u_mad/nv_q15_reg[15]_i_25_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    46.008 r  u_mad/nv_q15_reg[15]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000    46.008    u_mad/nv_q15_reg[15]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    46.125 r  u_mad/nv_q15_reg[15]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    46.125    u_mad/nv_q15_reg[15]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    46.304 r  u_mad/nv_q15_reg[15]_i_5/CO[1]
+                         net (fo=19, unplaced)        0.584    46.888    u_mad/nv_q15_reg[15]_i_5_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    47.691 r  u_mad/nv_q15_reg[15]_i_49/CO[3]
+                         net (fo=1, unplaced)         0.009    47.700    u_mad/nv_q15_reg[15]_i_49_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    47.817 r  u_mad/nv_q15_reg[15]_i_24/CO[3]
+                         net (fo=1, unplaced)         0.000    47.817    u_mad/nv_q15_reg[15]_i_24_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    47.934 r  u_mad/nv_q15_reg[15]_i_9/CO[3]
+                         net (fo=1, unplaced)         0.000    47.934    u_mad/nv_q15_reg[15]_i_9_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    48.051 r  u_mad/nv_q15_reg[15]_i_4/CO[3]
+                         net (fo=1, unplaced)         0.000    48.051    u_mad/nv_q15_reg[15]_i_4_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    48.230 r  u_mad/nv_q15_reg[15]_i_3/CO[1]
+                         net (fo=22, unplaced)        0.587    48.817    u_mad/nv_q15_reg[15]_i_3_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    49.620 r  u_mad/nv_q15_reg[14]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.009    49.629    u_mad/nv_q15_reg[14]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    49.746 r  u_mad/nv_q15_reg[14]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    49.746    u_mad/nv_q15_reg[14]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    49.863 r  u_mad/nv_q15_reg[14]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    49.863    u_mad/nv_q15_reg[14]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    49.980 r  u_mad/nv_q15_reg[14]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    49.980    u_mad/nv_q15_reg[14]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    50.159 r  u_mad/nv_q15_reg[14]_i_2/CO[1]
+                         net (fo=22, unplaced)        0.587    50.746    u_mad/nv_q15_reg[14]_i_2_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    51.549 r  u_mad/nv_q15_reg[13]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.009    51.558    u_mad/nv_q15_reg[13]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    51.675 r  u_mad/nv_q15_reg[13]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    51.675    u_mad/nv_q15_reg[13]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    51.792 r  u_mad/nv_q15_reg[13]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    51.792    u_mad/nv_q15_reg[13]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    51.909 r  u_mad/nv_q15_reg[13]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    51.909    u_mad/nv_q15_reg[13]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    52.088 r  u_mad/nv_q15_reg[13]_i_2/CO[1]
+                         net (fo=22, unplaced)        0.587    52.675    u_mad/nv_q15_reg[13]_i_2_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    53.478 r  u_mad/nv_q15_reg[12]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.009    53.487    u_mad/nv_q15_reg[12]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    53.604 r  u_mad/nv_q15_reg[12]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    53.604    u_mad/nv_q15_reg[12]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    53.721 r  u_mad/nv_q15_reg[12]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    53.721    u_mad/nv_q15_reg[12]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    53.838 r  u_mad/nv_q15_reg[12]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    53.838    u_mad/nv_q15_reg[12]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    54.017 r  u_mad/nv_q15_reg[12]_i_2/CO[1]
+                         net (fo=22, unplaced)        0.587    54.604    u_mad/nv_q15_reg[12]_i_2_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    55.407 r  u_mad/nv_q15_reg[11]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.009    55.416    u_mad/nv_q15_reg[11]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    55.533 r  u_mad/nv_q15_reg[11]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    55.533    u_mad/nv_q15_reg[11]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    55.650 r  u_mad/nv_q15_reg[11]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    55.650    u_mad/nv_q15_reg[11]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    55.767 r  u_mad/nv_q15_reg[11]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    55.767    u_mad/nv_q15_reg[11]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    55.946 r  u_mad/nv_q15_reg[11]_i_2/CO[1]
+                         net (fo=22, unplaced)        0.587    56.533    u_mad/nv_q15_reg[11]_i_2_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    57.336 r  u_mad/nv_q15_reg[10]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.009    57.345    u_mad/nv_q15_reg[10]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    57.462 r  u_mad/nv_q15_reg[10]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    57.462    u_mad/nv_q15_reg[10]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    57.579 r  u_mad/nv_q15_reg[10]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    57.579    u_mad/nv_q15_reg[10]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    57.696 r  u_mad/nv_q15_reg[10]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    57.696    u_mad/nv_q15_reg[10]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    57.875 r  u_mad/nv_q15_reg[10]_i_2/CO[1]
+                         net (fo=23, unplaced)        0.588    58.463    u_mad/nv_q15_reg[10]_i_2_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    59.266 r  u_mad/nv_q15_reg[9]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.009    59.275    u_mad/nv_q15_reg[9]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    59.392 r  u_mad/nv_q15_reg[9]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    59.392    u_mad/nv_q15_reg[9]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    59.509 r  u_mad/nv_q15_reg[9]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    59.509    u_mad/nv_q15_reg[9]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    59.626 r  u_mad/nv_q15_reg[9]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    59.626    u_mad/nv_q15_reg[9]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    59.805 r  u_mad/nv_q15_reg[9]_i_2/CO[1]
+                         net (fo=22, unplaced)        0.587    60.392    u_mad/nv_q15_reg[9]_i_2_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    61.195 r  u_mad/nv_q15_reg[8]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.009    61.204    u_mad/nv_q15_reg[8]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    61.321 r  u_mad/nv_q15_reg[8]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    61.321    u_mad/nv_q15_reg[8]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    61.438 r  u_mad/nv_q15_reg[8]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    61.438    u_mad/nv_q15_reg[8]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    61.555 r  u_mad/nv_q15_reg[8]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    61.555    u_mad/nv_q15_reg[8]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    61.734 r  u_mad/nv_q15_reg[8]_i_2/CO[1]
+                         net (fo=22, unplaced)        0.587    62.321    u_mad/nv_q15_reg[8]_i_2_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    63.124 r  u_mad/nv_q15_reg[7]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.009    63.133    u_mad/nv_q15_reg[7]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    63.250 r  u_mad/nv_q15_reg[7]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    63.250    u_mad/nv_q15_reg[7]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    63.367 r  u_mad/nv_q15_reg[7]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    63.367    u_mad/nv_q15_reg[7]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    63.484 r  u_mad/nv_q15_reg[7]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    63.484    u_mad/nv_q15_reg[7]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    63.663 r  u_mad/nv_q15_reg[7]_i_2/CO[1]
+                         net (fo=22, unplaced)        0.587    64.250    u_mad/nv_q15_reg[7]_i_2_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    65.053 r  u_mad/nv_q15_reg[6]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.009    65.062    u_mad/nv_q15_reg[6]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    65.179 r  u_mad/nv_q15_reg[6]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    65.179    u_mad/nv_q15_reg[6]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    65.296 r  u_mad/nv_q15_reg[6]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    65.296    u_mad/nv_q15_reg[6]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    65.413 r  u_mad/nv_q15_reg[6]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    65.413    u_mad/nv_q15_reg[6]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    65.592 r  u_mad/nv_q15_reg[6]_i_2/CO[1]
+                         net (fo=22, unplaced)        0.587    66.179    u_mad/nv_q15_reg[6]_i_2_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    66.982 r  u_mad/nv_q15_reg[5]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.009    66.991    u_mad/nv_q15_reg[5]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    67.108 r  u_mad/nv_q15_reg[5]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    67.108    u_mad/nv_q15_reg[5]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    67.225 r  u_mad/nv_q15_reg[5]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    67.225    u_mad/nv_q15_reg[5]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    67.342 r  u_mad/nv_q15_reg[5]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    67.342    u_mad/nv_q15_reg[5]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    67.521 r  u_mad/nv_q15_reg[5]_i_2/CO[1]
+                         net (fo=22, unplaced)        0.587    68.108    u_mad/nv_q15_reg[5]_i_2_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    68.911 r  u_mad/nv_q15_reg[4]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.009    68.920    u_mad/nv_q15_reg[4]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    69.037 r  u_mad/nv_q15_reg[4]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    69.037    u_mad/nv_q15_reg[4]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    69.154 r  u_mad/nv_q15_reg[4]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    69.154    u_mad/nv_q15_reg[4]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    69.271 r  u_mad/nv_q15_reg[4]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    69.271    u_mad/nv_q15_reg[4]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    69.450 r  u_mad/nv_q15_reg[4]_i_2/CO[1]
+                         net (fo=22, unplaced)        0.587    70.037    u_mad/nv_q15_reg[4]_i_2_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    70.840 r  u_mad/nv_q15_reg[3]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.009    70.849    u_mad/nv_q15_reg[3]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    70.966 r  u_mad/nv_q15_reg[3]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    70.966    u_mad/nv_q15_reg[3]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    71.083 r  u_mad/nv_q15_reg[3]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    71.083    u_mad/nv_q15_reg[3]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    71.200 r  u_mad/nv_q15_reg[3]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    71.200    u_mad/nv_q15_reg[3]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    71.379 r  u_mad/nv_q15_reg[3]_i_2/CO[1]
+                         net (fo=22, unplaced)        0.587    71.966    u_mad/nv_q15_reg[3]_i_2_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    72.769 r  u_mad/nv_q15_reg[2]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.009    72.778    u_mad/nv_q15_reg[2]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    72.895 r  u_mad/nv_q15_reg[2]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    72.895    u_mad/nv_q15_reg[2]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    73.012 r  u_mad/nv_q15_reg[2]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    73.012    u_mad/nv_q15_reg[2]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    73.129 r  u_mad/nv_q15_reg[2]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    73.129    u_mad/nv_q15_reg[2]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    73.308 r  u_mad/nv_q15_reg[2]_i_2/CO[1]
+                         net (fo=22, unplaced)        0.587    73.895    u_mad/nv_q15_reg[2]_i_2_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    74.698 r  u_mad/nv_q15_reg[1]_i_16/CO[3]
+                         net (fo=1, unplaced)         0.009    74.707    u_mad/nv_q15_reg[1]_i_16_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    74.824 r  u_mad/nv_q15_reg[1]_i_11/CO[3]
+                         net (fo=1, unplaced)         0.000    74.824    u_mad/nv_q15_reg[1]_i_11_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    74.941 r  u_mad/nv_q15_reg[1]_i_6/CO[3]
+                         net (fo=1, unplaced)         0.000    74.941    u_mad/nv_q15_reg[1]_i_6_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    75.058 r  u_mad/nv_q15_reg[1]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    75.058    u_mad/nv_q15_reg[1]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    75.237 r  u_mad/nv_q15_reg[1]_i_2/CO[1]
+                         net (fo=22, unplaced)        0.587    75.824    u_mad/nv_q15_reg[1]_i_2_n_2
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.803    76.627 r  u_mad/nv_q15_reg[0]_i_15/CO[3]
+                         net (fo=1, unplaced)         0.009    76.636    u_mad/nv_q15_reg[0]_i_15_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    76.753 r  u_mad/nv_q15_reg[0]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000    76.753    u_mad/nv_q15_reg[0]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    76.870 r  u_mad/nv_q15_reg[0]_i_5/CO[3]
+                         net (fo=1, unplaced)         0.000    76.870    u_mad/nv_q15_reg[0]_i_5_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    76.987 r  u_mad/nv_q15_reg[0]_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000    76.987    u_mad/nv_q15_reg[0]_i_3_n_0
+                         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.281    77.268 r  u_mad/nv_q15_reg[0]_i_2/CO[0]
+                         net (fo=1, unplaced)         0.311    77.579    u_mad/nv_q15_reg[0]_i_2_n_3
+                         LUT5 (Prop_lut5_I4_O)        0.367    77.946 r  u_mad/nv_q15[0]_i_1/O
+                         net (fo=1, unplaced)         0.000    77.946    u_mad/nv_result[0]
+                         FDRE                                         r  u_mad/nv_q15_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       75.000    75.000 r  
+                                                      0.000    75.000 r  clk (IN)
+                         net (fo=0)                   0.000    75.000    clk
+                         IBUF (Prop_ibuf_I_O)         0.789    75.789 r  clk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.760    76.549    clk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.091    76.640 r  clk_IBUF_BUFG_inst/O
+                         net (fo=549, unplaced)       0.439    77.079    u_mad/clk_IBUF_BUFG
+                         FDRE                                         r  u_mad/nv_q15_reg[0]/C
+                         clock pessimism              0.178    77.257    
+                         clock uncertainty           -0.035    77.222    
+                         FDRE (Setup_fdre_C_D)        0.029    77.251    u_mad/nv_q15_reg[0]
+  -------------------------------------------------------------------
+                         required time                         77.251    
+                         arrival time                         -77.946    
+  -------------------------------------------------------------------
+                         slack                                 -0.695    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.101ns  (arrival time - required time)
+  Source:                 u_sq/y_out_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@37.500ns period=75.000ns})
+  Destination:            u_mwi/sr_reg[27][10]_srl28___u_mwi_sr_reg_r_26/D
+                            (rising edge-triggered cell SRLC32E clocked by clk  {rise@0.000ns fall@37.500ns period=75.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.310ns  (logic 0.141ns (45.418%)  route 0.169ns (54.582%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.983ns
+    Source Clock Delay      (SCD):    0.629ns
+    Clock Pessimism Removal (CPR):    0.209ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+                         IBUF (Prop_ibuf_I_O)         0.152     0.152 r  clk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.337     0.489    clk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.026     0.515 r  clk_IBUF_BUFG_inst/O
+                         net (fo=549, unplaced)       0.114     0.629    u_sq/clk_IBUF_BUFG
+                         FDRE                                         r  u_sq/y_out_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.141     0.770 r  u_sq/y_out_reg[10]/Q
+                         net (fo=3, unplaced)         0.169     0.939    u_mwi/sq_out[10]
+                         SRLC32E                                      r  u_mwi/sr_reg[27][10]_srl28___u_mwi_sr_reg_r_26/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+                         IBUF (Prop_ibuf_I_O)         0.340     0.340 r  clk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.355     0.695    clk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.029     0.724 r  clk_IBUF_BUFG_inst/O
+                         net (fo=549, unplaced)       0.259     0.983    u_mwi/clk_IBUF_BUFG
+                         SRLC32E                                      r  u_mwi/sr_reg[27][10]_srl28___u_mwi_sr_reg_r_26/CLK
+                         clock pessimism             -0.209     0.774    
+                         SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.064     0.838    u_mwi/sr_reg[27][10]_srl28___u_mwi_sr_reg_r_26
+  -------------------------------------------------------------------
+                         required time                         -0.838    
+                         arrival time                           0.939    
+  -------------------------------------------------------------------
+                         slack                                  0.101    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 37.500 }
+Period(ns):         75.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     BUFG/I       n/a            2.155         75.000      72.845               clk_IBUF_BUFG_inst/I
+Low Pulse Width   Slow    SRLC32E/CLK  n/a            0.980         37.500      36.520               u_mwi/sr_reg[27][0]_srl28___u_mwi_sr_reg_r_26/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.980         37.500      36.520               u_mwi/sr_reg[27][0]_srl28___u_mwi_sr_reg_r_26/CLK
+
+
+
